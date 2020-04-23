@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+  <title>인터넷과 웹 기초</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <script src="./assets/js/jquery.min.js"></script>
+</head>
+
+<body>
+  <h1>공공마스크 조회</h1>
+  <div id="one">
+  <div class="input-group mb-3" style="width: 500px; float: left;">
+    <input type="text" class="form-control" placeholder="부산광역시 금정구" id="input1">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" id="button1">검색하기</button>
+    </div>
+  </div>
+  <div id="mylist" style="width: 500px; floating"></div>
+  <div id="map" style="float: right; height: 1000px; width: 1000px;"></div>
+</div>
+  <!--
+  <input type="text" id="input1">
+  <button type="button" class="btn btn-dark" id="button1">검색하기</button>
+  <div id="inlist"></div>-->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAymPslj6q9BslJXHoIwpEZr0bBQ9UA0os&callback=initMap"></script>
+  <script src="./assets/js/script.js"></script>
+  <script>
+    // Initialize and add the map
+    function initMap() {
+      // The location of Uluru
+      var uluru = {
+        lat: -25.344,
+        lng: 131.036
+      };
+      // The map, centered at Uluru
+      var map = new google.maps.Map(
+        document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+  </script>
+</body>
