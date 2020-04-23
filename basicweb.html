@@ -1,23 +1,25 @@
-<!DOCTYPE html>
+---
+layout: default
 
-<head>
-  <title>인터넷과 웹 기초</title>
+title: BasicWeb | helloalpaca
+description: Internet and Basic Web project
+url: https://helloalpaca.github.io//projects
+custom_js: script.js
+---
+<div>
   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
   <script src="./assets/js/jquery.min.js"></script>
-</head>
-
-<body>
   <h1>공공마스크 조회</h1>
   <div id="one">
-  <div class="input-group mb-3" style="width: 500px; float: left;">
-    <input type="text" class="form-control" placeholder="부산광역시 금정구" id="input1">
-    <div class="input-group-append">
-      <button class="btn btn-outline-secondary" type="button" id="button1">검색하기</button>
+    <div class="input-group mb-3" style="width: 500px; float: left;">
+      <input type="text" class="form-control" placeholder="부산광역시 금정구" id="input1">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button" id="button1">검색하기</button>
+      </div>
     </div>
+    <div id="mylist" style="width: 500px; floating"></div>
+    <div id="map" style="float: right; height: 1000px; width: 1000px;"></div>
   </div>
-  <div id="mylist" style="width: 500px; floating"></div>
-  <div id="map" style="float: right; height: 1000px; width: 1000px;"></div>
-</div>
   <!--
   <input type="text" id="input1">
   <button type="button" class="btn btn-dark" id="button1">검색하기</button>
@@ -45,4 +47,4 @@
       });
     }
   </script>
-</body>
+</div>
