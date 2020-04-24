@@ -1,50 +1,23 @@
 ---
 layout: default
 
-title: BasicWeb | helloalpaca
+title: 학번 이름
 description: Internet and Basic Web project
 url: https://helloalpaca.github.io//projects
 custom_js: script.js
 ---
 <div>
-  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="./assets/js/jquery.min.js"></script>
-  <h1>공공마스크 조회</h1>
-  <div id="one">
-    <div class="input-group mb-3" style="width: 500px; float: left;">
-      <input type="text" class="form-control" placeholder="부산광역시 금정구" id="input1">
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button" id="button1">검색하기</button>
-      </div>
+  <h1>공적 마스크 조회하기</h1>
+  <div style="width: 500px; float: left;">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="부산광역시 금정구 장전동" id="input">
+      <button class="btn btn-outline-secondary" type="button" id="button">주소 검색하기</button>
     </div>
-    <div id="mylist" style="width: 500px; floating"></div>
-    <div id="map" style="float: right; height: 1000px; width: 1000px;"></div>
+    <div class="list-group" style="overflow: auto; height:500px;" id="list"></div>
   </div>
-  <!--
-  <input type="text" id="input1">
-  <button type="button" class="btn btn-dark" id="button1">검색하기</button>
-  <div id="inlist"></div>-->
+  <div style="float: left; height: 575px; width: 500px;" id="googleMap"></div>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAymPslj6q9BslJXHoIwpEZr0bBQ9UA0os&callback=initMap"></script>
   <script src="./assets/js/script.js"></script>
-  <script>
-    // Initialize and add the map
-    function initMap() {
-      // The location of Uluru
-      var uluru = {
-        lat: -25.344,
-        lng: 131.036
-      };
-      // The map, centered at Uluru
-      var map = new google.maps.Map(
-        document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-      // The marker, positioned at Uluru
-      var marker = new google.maps.Marker({
-        position: uluru,
-        map: map
-      });
-    }
-  </script>
 </div>
