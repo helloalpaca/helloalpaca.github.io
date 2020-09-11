@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "github.io page not build 에러 해결"
+date:   2020-09-11 20:45:36 +0530
+categories: Git Github
+---
+Github.io 블로그를 본격적으로 꾸며보려고 하는데, 자꾸 깃헙에서 메일이 왔습니다.
+
+>The page build completed successfully, but returned the following warning for the `master` branch: </br>
+You are attempting to use a Jekyll theme, "plainwhite", which is not supported by GitHub Pages.
+
+이 문제는 _config.yml 파일의 theme를 삭제해주면 간단하게 해결되는 에러입니다.
+
+이 이후로는 page not build 에러 메일이 오지 않고 있습니다.
+
+![Github에서 온 메일](/assets/images/200911_email.png)
